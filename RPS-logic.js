@@ -31,7 +31,7 @@ function getHumanChoice() {
       return 2;
     } else if (choice === "scissors") return 3;
     else {
-      console.log("invalid input, try again");
+      alert("invalid input, try again");
       continue;
     }
   }
@@ -40,28 +40,28 @@ function getHumanChoice() {
 function determineRoundWinner(humanChoice, ComputerChoice) {
   if (ComputerChoice === 1) {
     if (humanChoice === 2) {
-      console.log("You Win! Paper beats Rock");
+      alert("You Win! Paper beats Rock");
       humanScore++;
     } else if (humanChoice === 3) {
-      console.log("You lose! Rock beats Scissors");
+      alert("You lose! Rock beats Scissors");
       computerScore++;
-    } else console.log("You both chose Rock! Tie game");
+    } else alert("You both chose Rock! Tie game");
   } else if (ComputerChoice === 2) {
     if (humanChoice === 1) {
-      console.log("You Lose! Paper beats Rock");
+      alert("You Lose! Paper beats Rock");
       computerScore++;
     } else if (humanChoice === 3) {
-      console.log("You Win! Scisssors beat Paper");
+      alert("You Win! Scisssors beat Paper");
       humanScore++;
-    } else console.log("You both chose Paper! Tie game");
+    } else alert("You both chose Paper! Tie game");
   } else {
     if (humanChoice === 1) {
-      console.log("You Win! Rock beats scissors");
+      alert("You Win! Rock beats scissors");
       humanScore++;
     } else if (humanChoice === 2) {
-      console.log("You lose! Scissors beat Paper");
+      alert("You lose! Scissors beat Paper");
       computerScore++;
-    } else console.log("You both chose Scissor! Tie game");
+    } else alert("You both chose Scissor! Tie game");
   }
 }
 
@@ -69,7 +69,7 @@ function playRound() {
   const computerSelect = getComputerChoice();
   const humanSelect = getHumanChoice();
   determineRoundWinner(humanSelect, computerSelect);
-  console.log(
+  alert(
     `Current Score:\n You: ${humanScore}\n Computer: ${computerScore}`,
   );
 }
@@ -79,10 +79,10 @@ function playGame() {
     playRound();
   }
   if (humanScore > computerScore) {
-    console.log(`You Win! score is ${humanScore} to ${computerScore}`);
+    alert(`You Win! score is ${humanScore} to ${computerScore}`);
   } else if (computerScore > humanScore) {
-    console.log(`You lose! score is ${humanScore} to ${computerScore}`);
+    alert(`You lose! score is ${humanScore} to ${computerScore}`);
   } else {
-    console.log(`You Tied! score is ${humanScore} to ${computerScore}`);
+    alert(`You Tied! score is ${humanScore} to ${computerScore}`);
   }
 }
