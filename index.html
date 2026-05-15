@@ -12,12 +12,26 @@
       <h1>Rock Paper Scissors</h1>
     </header>
     <section class="intro-screen">
-      <button id="intro-button" onclick="playGame()">Play Game</button>
+      <button id="intro-button">Play Game</button>
     </section>
 
-    <section id="game-screen">
-      <h3>Choose Your Next Move</h3>
+    <section class="game-screen hidden">
+      <h2 id="results">Choose Your Next Move</h2>
+      <h4>
+        Current Score: <br />
+        You:<span id="human-score">0</span>
+        <br />
+        Computer:<span id="computer-score">0</span>
+      </h4>
+      <button class="game-buttons" data-choice="rock">✊</button>
+      <button class="game-buttons" data-choice="paper">🤚</button>
+      <button class="game-buttons" data-choice="scissors">✌️</button>
     </section>
-    
+    <footer>
+      <p>
+        © 2026 Mohannad Ali · Rock-Paper-Scissors ·
+        <a href="https://github.com/Ali7488/rock-paper-scissors">GitHub</a>
+      </p>
+    </footer>
   </body>
 </html>
