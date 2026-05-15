@@ -88,5 +88,5 @@ function resetGame() {
 
   humanScoreTag.textContent = humanScore;
   computerScoreTag.textContent = computerScore;
-  resultsTag.textContent = "Choose your next move.";
+  resultsTag.textContent = "Choose Your Next Move, first to 5 wins!";
 }
