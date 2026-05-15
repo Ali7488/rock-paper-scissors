@@ -24,7 +24,7 @@ function getComputerChoice() {
 function getHumanChoice() {
   while (true) {
     let choice = prompt("Please Input your choice (Rock/Paper/Scissors): ");
-    let choiceLower = choice.toLowerCase();
+    let choiceLower = choice.toLowerCase(); //makes the prompt case-insensitive
     if (choiceLower === "rock") {
       return 1;
     } else if (choiceLower === "paper") {
@@ -38,6 +38,7 @@ function getHumanChoice() {
 }
 
 function determineRoundWinner(humanChoice, ComputerChoice) {
+  //an if-else jungle just to determine the winner of each round
   if (ComputerChoice === 1) {
     if (humanChoice === 2) {
       alert("You Win! Paper beats Rock");
@@ -69,9 +70,7 @@ function playRound() {
   const computerSelect = getComputerChoice();
   const humanSelect = getHumanChoice();
   determineRoundWinner(humanSelect, computerSelect);
-  alert(
-    `Current Score:\n You: ${humanScore}\n Computer: ${computerScore}`,
-  );
+  alert(`Current Score:\n You: ${humanScore}\n Computer: ${computerScore}`);
 }
 
 function playGame() {
@@ -86,3 +85,10 @@ function playGame() {
     alert(`You Tied! score is ${humanScore} to ${computerScore}`);
   }
 }
+
+const playGameButton = document.querySelector("#intro-button");
+function hideButton() {
+  playGameButton.classList.add("hidden");
+}
+
+playGameButton.addEventListener("click", hideButton);
